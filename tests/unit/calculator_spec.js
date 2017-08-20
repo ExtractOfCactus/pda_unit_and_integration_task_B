@@ -40,8 +40,10 @@ describe('calculator', function () {
   });
 
   it('can have a number clicked', function() {
-    git remote add origin git@github.com:ExtractOfCactus/Unit_and_Integration_Task_B.git
-    git push -u origin master
+    calculator.numberClick(5);
+    assert.equal(calculator.runningTotal, 5);
   })
+
+  it('can have number clicked')
 
 });
