@@ -42,7 +42,7 @@ describe('calculator', function () {
   it('can have a number clicked', function() {
     calculator.numberClick(5);
     assert.equal(calculator.runningTotal, 5);
-  })
+  });
 
   it('can have an operator clicked', function() {
     calculator.numberClick(5);
@@ -50,6 +50,15 @@ describe('calculator', function () {
     calculator.numberClick(5);
     calculator.operatorClick('=');
     assert.equal(calculator.runningTotal, 25);
+  });
+
+  it('can have clear clicked', function() {
+    calculator.numberClick(5);
+    calculator.operatorClick('*');
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    calculator.clearClick();
+    assert.equal(calculator.runningTotal, 0);
   })
 
 });
