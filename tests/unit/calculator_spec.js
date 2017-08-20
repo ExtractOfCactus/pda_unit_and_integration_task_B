@@ -44,6 +44,12 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 5);
   })
 
-  it('can have number clicked')
+  it('can have an operator clicked', function() {
+    calculator.numberClick(5);
+    calculator.operatorClick('*');
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    assert.equal(calculator.runningTotal, 25);
+  })
 
 });
